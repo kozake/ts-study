@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var FizzBuzz = /** @class */ (function () {
     function FizzBuzz() {
     }
@@ -20,5 +21,4 @@ var FizzBuzz = /** @class */ (function () {
     };
     return FizzBuzz;
 }());
-var size = process.argv[2] ? Number(process.argv[2]) : 100;
-new FizzBuzz().run(size);
+exports.FizzBuzz = FizzBuzz;

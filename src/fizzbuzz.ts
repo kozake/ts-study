@@ -1,4 +1,4 @@
-class FizzBuzz {
+export class FizzBuzz {
 
     run(size: number) {
 
@@ -16,6 +16,3 @@ class FizzBuzz {
     }
     
 }
-
-let size = process.argv[2] ? Number(process.argv[2]) : 100;
-new FizzBuzz().run(size);
