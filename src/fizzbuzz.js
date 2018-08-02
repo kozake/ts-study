@@ -15,4 +15,5 @@ function fizzbuzz(size) {
         }
     }
 }
-fizzbuzz(300);
+var size = process.argv[2] ? Number(process.argv[2]) : 100;
+fizzbuzz(size);

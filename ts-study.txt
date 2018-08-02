@@ -15,7 +15,7 @@ fizzbuzz
 
 function
 
-proc.arg
+proc.argv
 
 read-file
 

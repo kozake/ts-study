@@ -13,4 +13,5 @@ function fizzbuzz(size: number) {
     }
 }
 
-fizzbuzz(300);
+let size = process.argv[2] ? Number(process.argv[2]) : 100;
+fizzbuzz(size);
