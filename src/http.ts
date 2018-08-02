@@ -1,26 +1,39 @@
 import { get } from 'http'
 
-let call = new Promise((resolve, rejects) => {
+function call(url: string): Promise<any> {
 
-    let buff = "";
-    const req = get("http://172.18.1.16:8082/", res => {
-        res.on("data", body => {
-            buff += body.toString();
-        });
-        res.on("end", () => {
-            resolve(buff);
+    return new Promise((resolve, rejects) => {
+
+        let buff = "";
+        const req = get(url, res => {
+            res.on("data", body => {
+                buff += body.toString();
+            });
+            res.on("end", () => {
+                resolve(buff);
+            })
         })
-    })
+        
+        req.on('error', (e) => {
+            rejects(e.message);
+        });
     
-    req.on('error', (e) => {
-        rejects(e.message);
     });
-    
-});
+}
 
+async function test() {
 
-call.then(data => {
-    console.log(data);
-}).catch(message => {
-    console.log(message);
-});
+    try {
+        let data1 = await call("http://172.18.1.16:8082/");
+        let data2 = await call("http://172.18.1.16:8082/");
+        let data3 = await call("http://172.18.1.16:8082/");
+
+        console.log(data1);
+        console.log(data2);
+        console.log(data3);
+    } catch(message) {
+        console.log(message);
+    }
+}
+
+test();
