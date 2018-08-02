@@ -7,6 +7,7 @@ npm init -y
 npm script
 
 npm install -D typescript
+npm install -D @types/node
 
 tsc --init
 
