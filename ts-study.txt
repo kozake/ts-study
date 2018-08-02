@@ -1,0 +1,23 @@
+hello world
+
+git init
+
+
+npm init -y
+
+npm script
+
+npm install -D typescript
+
+tsc --init
+
+fizzbuzz
+
+function
+
+proc.arg
+
+read-file
+
+class
+
