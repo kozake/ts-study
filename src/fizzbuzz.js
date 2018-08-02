@@ -1,10 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var FizzBuzz = /** @class */ (function () {
-    function FizzBuzz() {
-    }
-    FizzBuzz.prototype.run = function (size) {
-        for (var i = 0; i < size; i++) {
+class FizzBuzz {
+    run(size) {
+        for (let i = 0; i < size; i++) {
             if (i % 15 === 0) {
                 console.log('fizzbuzz');
             }
@@ -18,7 +16,6 @@ var FizzBuzz = /** @class */ (function () {
                 console.log(i);
             }
         }
-    };
-    return FizzBuzz;
-}());
+    }
+}
 exports.FizzBuzz = FizzBuzz;
