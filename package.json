@@ -13,6 +13,10 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^10.5.5",
+    "@types/sprintf-js": "^1.1.0",
     "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "sprintf-js": "^1.1.1"
   }
 }

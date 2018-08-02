@@ -23,3 +23,6 @@ class
 
 module
 
+import-library
+ - npm install -S sprintf-js
+ - npm install -D @types/sprintf-js
